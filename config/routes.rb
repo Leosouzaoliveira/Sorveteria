@@ -1,4 +1,10 @@
 Sorveteria::Application.routes.draw do
+  resources :produtos
+
+
+  resources :protudos
+
+
   resources :sorvetes
   root :to => "sorvetes#index"
 

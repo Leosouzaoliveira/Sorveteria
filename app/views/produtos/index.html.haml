@@ -1,0 +1,22 @@
+%h1 Lista de produtos
+
+%table
+  %tr
+    %th Nome
+    %th Tipo
+    %th Preco
+    %th
+    %th
+    %th
+
+- @produtos.each do |produto|
+  %tr
+    %td= produto.nome
+    %td= produto.tipo
+    %td= produto.preco
+    %td= link_to 'Mostrar', produto
+    %td= link_to 'Editar', edit_produto_path(produto)
+    %td= link_to 'Deletar', produto, method: :delete, data: { confirm: 'Voce tem certeza?' }
+
+%br
+= link_to 'Novo Produto', new_produto_path
