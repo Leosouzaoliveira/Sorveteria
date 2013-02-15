@@ -1,0 +1,21 @@
+%h1 Listing sorvetes
+
+%table
+  %tr
+    %th Sabor
+    %th Preco
+    %th Cobertura
+    %th
+    %th
+
+- @sorvetes.each do |sorvete|
+  %tr
+    %td= sorvete.sabor
+    %td= sorvete.preco
+    %td= sorvete.cobertura
+    %td= link_to 'Show', sorvete
+    %td= link_to 'Edit', edit_sorvete_path(sorvete)
+    %td= link_to 'Destroy', sorvete, method: :delete, data: { confirm: 'Esta certo disso?' }
+
+%br
+= link_to 'New Sorvete', new_sorvete_path

@@ -1,0 +1,8 @@
+-semantic_form_for @sorvete do |f|
+  - f.inputs do
+    = f.input :sabor 
+    = f.input :preco 
+    = f.input :cobertura, :as => :radio, :label => "Cobertura",
+     :collection => [["Sim", true], ["Nao", false]]
+  = f.button
+

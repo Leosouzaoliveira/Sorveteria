@@ -1,0 +1,17 @@
+#notice = notice
+
+%p
+  %b Sabor:
+  = @sorvete.sabor
+
+%p
+  %b Preco:
+  = @sorvete.preco
+
+%p
+  %b Cobertura:
+  = @sorvete.cobertura
+
+
+= link_to 'Edit', edit_sorvete_path(@sorvete) |
+= link_to 'Back', sorvetes_path
